@@ -35,11 +35,12 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0; 
 }
 
-#sueldo-bruto, #bonos {
+.sueldo-bruto, .bonos {
     outline: none;
     border-top: none;
     border-right: none;
     border-left: none;
+    border-bottom: solid 1px#fff;
     background-color: #232323;
     color: #fff;
     font-size: 1.25rem;
@@ -65,4 +66,33 @@ input[type=number]::-webkit-outer-spin-button {
 
 .botones:first-of-type {
     margin-right: 20px;
+}
+
+.error {
+    border-bottom: solid 1px red;
+}
+
+.error:focus {
+    border-bottom: solid 1px #fff;
+}
+
+.contenedor-bono {
+    display: none;
+    transition: all .5s;
+}
+
+#si:checked ~ .contenedor-bono {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.resultado {
+    font-size: 1.5rem;
 }
